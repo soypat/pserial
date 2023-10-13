@@ -14,3 +14,4 @@ syscall compatibility to pyserial as possible.
 go mod download github.com/soypat/pserial@latest
 ```
 
+This is a experimental WIP. Feel free to contribute!

@@ -38,7 +38,10 @@ type Serial struct {
 }
 
 type Mode struct {
-	Baud     int
+	// Baud is amount of data and non-data bits sent over the wire per second.
+	// Common bauds are 9600, 19200, 115200.
+	Baud int
+	//
 	ByteSize uint8
 	Parity   Parity
 	StopBits StopBits
@@ -50,7 +53,6 @@ func Open(name string, config Mode) (*Serial, error) {
 	}
 	serial.Open("", nil)
 	return nativeOpen(name, config)
-
 }
 
 func (s *Serial) lock() {
